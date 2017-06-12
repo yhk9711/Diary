@@ -3,6 +3,7 @@ package yoo;
 import java.util.Scanner;
 
  public class Diary {
+	 private double inbalance;
 	private double balance;
 	protected static int count=0;
 	protected static int[] date;
@@ -26,6 +27,7 @@ import java.util.Scanner;
 		ft=0.0;
 		ct=0.0;
 		at=0.0;
+		inbalance=400000;
 		balance=400000;
 		date=new int[100];
 		cloth=new int[100];
@@ -49,7 +51,7 @@ import java.util.Scanner;
 		   annitotal=annitotal+anni;
 	   }
 	   
-	   public int price(){ 
+	   public double price(){ 
 		   total=foodtotal+clothtotal+annitotal;   
 		   return total;
 	   }
@@ -74,8 +76,8 @@ import java.util.Scanner;
 	   public double getBalance(){
 	      return balance;
 	   }
-	   public double money(){
-		   return balance-=total;
+	   public double cmoney(){
+		   return inbalance=balance-total;
 	   }
 	   
 	   public static void main(String args[]){
@@ -108,21 +110,21 @@ import java.util.Scanner;
 				
 				count++;	
 				for(int j=0;j<count;j++){
-					   System.out.println("³¯Â¥ : "+date[j]+"\n"+"¿Ê¿¡ ¾´ µ·Àº : "+cloth[j]+"\n"+"À½½Ä¿¡ ¾´ µ·Àº : "+food[j]+"\n"+"±â³äÀÏ¿¡ ¾´ µ·Àº : "+anniversary[j]+"\n\n\n"
-				+"¿Ê¿¡ ¾´ ÃÑ ±Ý¾×Àº:"+clothtotal+"\n"+"À½½Ä¿¡ ¾´ ÃÑ ±Ý¾×Àº:"+foodtotal+"\n"+"±â³äÀÏ¿¡ ¾´ ÃÑ ±Ý¾×Àº:"+annitotal+"\n");
-					   System.out.println("ÃÑ ±Ý¾× :"+diary.price());
+					   System.out.println("³¯Â¥ : "+date[j]+"\n"+"¿Ê¿¡ ¾´ µ·Àº : "+cloth[j]+"\n"+"À½½Ä¿¡ ¾´ µ·Àº : "+food[j]+"\n"+"±â³äÀÏ¿¡ ¾´ µ·Àº : "+anniversary[j]+"\n");
+				}
 					   
-					   System.out.printf("¿Ê¿¡ ¾´ µ·ÀÇ ºñÀ² :%.2f\n ",diary.clothper(clothtotal));
-					   System.out.printf("À½½Ä¿¡ ¾´ µ·ÀÇ ºñÀ² :%.2f\n ",diary.foodper(foodtotal));
-					   System.out.printf("±â³äÀÏ¿¡ ¾´ µ·ÀÇ ºñÀ² :%.2f\n ",diary.anniper(annitotal));
-					   System.out.printf("³²Àº ±Ý¾× : %.2f\n", diary.money());
-				}
-				if(diary.money()<=(diary.price()/100)*0.2){
-					System.out.println("!!!!! °æ °í !!!!! ¾Æ ²¸ ¾² ¼¼ ¿ä !!!!!!");
-				}
-				if(diary.money()<=0.0){
-					System.out.println("ÀûÀÚ³µ´Âµ¥ ´õ ¾µ °Å¾ß????????");
-				}
+				System.out.println("¿Ê¿¡ ¾´ ÃÑ ±Ý¾×Àº:"+clothtotal+"\n"+"À½½Ä¿¡ ¾´ ÃÑ ±Ý¾×Àº:"+foodtotal+"\n"+"±â³äÀÏ¿¡ ¾´ ÃÑ ±Ý¾×Àº:"+annitotal+"\n");
+				System.out.println("ÃÑ ±Ý¾× :"+diary.price());
+				System.out.printf("¿Ê¿¡ ¾´ µ·ÀÇ ºñÀ² :%.2f\n ",diary.clothper(clothtotal));
+				System.out.printf("À½½Ä¿¡ ¾´ µ·ÀÇ ºñÀ² :%.2f\n ",diary.foodper(foodtotal));
+				System.out.printf("±â³äÀÏ¿¡ ¾´ µ·ÀÇ ºñÀ² :%.2f\n ",diary.anniper(annitotal));
+				System.out.printf("³²Àº ±Ý¾× : %.2f\n", diary.cmoney());
+				if((0.0<=diary.cmoney()) &&( diary.cmoney()<=400000*0.2)){
+					   System.out.println("!!!!! °æ °í !!!!! ¾Æ ²¸ ¾² ¼¼ ¿ä !!!!!!");
+				   }
+				if(diary.cmoney()<=0.0){
+					   System.out.println("ÀûÀÚ³µ´Âµ¥ ´õ ¾µ °Å¾ß????????");
+				   }
 			}
 	   }
  }
