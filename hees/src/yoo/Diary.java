@@ -2,39 +2,23 @@ package yoo;
 
 import java.util.Scanner;
 
- public class Diary { //변수 생성
-	protected static double inbalance;
-	protected static double balance;
+ public class Diary { //변수 생성과 초기화
+	protected static double inbalance=400000;
+	protected static double balance=400000;
 	protected static int count=0;
-	protected static int[] date;
-	protected static int[] cloth;
-	protected static int[] food;
-	protected static int[] anniversary;
-	protected static int foodtotal;
-	protected static int clothtotal;
-	protected static int annitotal;
-	protected static int total;
-	protected static double ft;
-	protected static double ct;
-	protected static double at;
+	protected static int[] date = new int[100];
+	protected static int[] cloth = new int[100];
+	protected static int[] food = new int[100];
+	protected static int[] anniversary = new int[100];
+	protected static int foodtotal = 0;
+	protected static int clothtotal = 0;
+	protected static int annitotal = 0;
+	protected static int total = 0;
+	protected static double ft = 0.0;
+	protected static double ct = 0.0;
+	protected static double at = 0.0;
 	
-	
-	Diary(){ //생성자
-		total=0;
-		clothtotal=0;
-		annitotal=0;
-		foodtotal=0;
-		ft=0.0;
-		ct=0.0;
-		at=0.0;
-		inbalance=400000;
-		balance=400000;
-		date=new int[100];
-		cloth=new int[100];
-		food=new int[100];
-		anniversary=new int[100];
-	}   
-	   public void date(int day){
+	public void date(int day){
 		   date[count]=day;
 	   }
 	   public void food(int f){ 
@@ -77,4 +61,4 @@ import java.util.Scanner;
 	   }
 	   public static void main(String args[]){
 	   }
- }
+}
