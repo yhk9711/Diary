@@ -134,12 +134,12 @@ import java.util.Scanner;
 					   }
 				}
 				else if(k==3){
-					int[] date=new int[count];
-					int[] cloth=new int[count];
-					int[] food=new int[count];
-					int[] anniversary=new int[count];
-					balance=400000;		
+					date[count]=0;
+					cloth[count]=0;
+					food[count]=0;
+					anniversary[count]=0;
 					count=0;
+					balance=400000;
 				}
 			}
 	   }
