@@ -135,7 +135,7 @@ import java.util.Scanner;
 				}
 				else if(k==3){
 					date[count]=0;
-					cloth[count]=0;
+					cloth[count]=0; 
 					food[count]=0;
 					anniversary[count]=0;
 					total=0;
