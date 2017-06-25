@@ -89,7 +89,7 @@ import java.util.Scanner;
 			int k=0;
 			
 			while(true){
-				System.out.println("1번 : 지출 입력"+"\n"+"2번 : 지출 내역"+"\n"+"3번 : 초기화"+"\n");
+				System.out.println("1번 : 지출 입력"+"\n"+"2번 : 지출 내역"+"\n"+"3번 : 보고싶은 내역 "+"\n"+"4번 : 초기화"+"\n");
 				k=scan.nextInt();
 				
 				
@@ -134,6 +134,18 @@ import java.util.Scanner;
 					   }
 				}
 				else if(k==3){
+					int h=0;
+					System.out.println("원하는 날짜 : ");
+					h=scan.nextInt();
+					for(int j=0;j<count;j++){
+						if(date[j]==h){
+							System.out.println("날짜 : "+date[j]+"\n"+"옷에 쓴 돈은 : "+cloth[j]+"\n"+"음식에 쓴 돈은 : "+food[j]+"\n"+"기념일에 쓴 돈은 : "+anniversary[j]+"\n");
+							break;
+						}
+				
+					}			
+				}
+				else if(k==4){
 					date[count]=0;
 					cloth[count]=0; 
 					food[count]=0;
