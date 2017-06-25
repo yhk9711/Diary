@@ -2,7 +2,7 @@ package yoo;
 
 import java.util.Scanner;
 
- public class Diary {
+ public class Diary { //변수 생성
 	protected static double inbalance;
 	protected static double balance;
 	protected static int count=0;
@@ -19,7 +19,7 @@ import java.util.Scanner;
 	protected static double at;
 	
 	
-	Diary(){
+	Diary(){ //생성자
 		total=0;
 		clothtotal=0;
 		annitotal=0;
@@ -37,7 +37,7 @@ import java.util.Scanner;
 	   public void date(int day){
 		   date[count]=day;
 	   }
-	   public void food(int f){
+	   public void food(int f){ 
 		   food[count]=f;
 		   foodtotal=foodtotal+f;
 	   }
@@ -51,11 +51,12 @@ import java.util.Scanner;
 		   annitotal=annitotal+anni;
 	   }
 	   
-	   public double price(){ 
+	 	   
+	   public double price(){ //전체 총 금액
 		   total=foodtotal+clothtotal+annitotal;   
 		   return total;
 	   }
-	   public double foodper(int foodtotal){
+	   public double foodper(int foodtotal){//퍼센트
 		   ft=((double)foodtotal/total)*100;
 		   return ft;
 	   }
@@ -67,16 +68,11 @@ import java.util.Scanner;
 		   at=((double)annitotal/total)*100;
 		   return at;
 	   }
-	   public void money(double add){
-	      balance+=add;
-	   }	   
-	   protected void setBalance(double b){
-	      balance=b;	      
-	   }
+	     
 	   public double getBalance(){
 	      return balance;
 	   }
-	   public double cmoney(){
+	   public double cmoney(){ //지출 후 현재 가지고 있는 돈
 		   return inbalance=balance-total;
 	   }
 	   public static void main(String args[]){
