@@ -3,7 +3,7 @@ package yoo;
 import java.util.Scanner;
 
  public class Diary {
-	 private double inbalance;
+	 private static double inbalance;
 	private static double balance;
 	protected static int count=0;
 	protected static int[] date;
@@ -138,8 +138,18 @@ import java.util.Scanner;
 					cloth[count]=0;
 					food[count]=0;
 					anniversary[count]=0;
+					total=0;
+					clothtotal=0;
+					annitotal=0;
+					foodtotal=0;
+					ft=0.0;
+					ct=0.0;
+					at=0.0;
+					inbalance=400000;
+					balance=400000;	
 					count=0;
 					balance=400000;
+					System.out.println("초기화 되었습니다.");
 				}
 			}
 	   }
